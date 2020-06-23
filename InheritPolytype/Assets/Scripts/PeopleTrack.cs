@@ -28,7 +28,15 @@ public class PeopleTrack : People
         {
             if(people[i] == null || people[i].transform.name == "殭屍" || people[i].transform.name=="警察")
             {
-                distance[i] = 999;  // 與殭屍物件的距離改為999
+                // 如果 人類死亡 距離 改成 1000
+                if(people[i]== null)
+                {
+                    distance[i] = 1000;
+                }
+                else
+                {
+                    distance[i] = 999;  // 與殭屍物件的距離改為999
+                }
                 continue;           // 繼續 - 跳過並執行下一次迴圈
             }
             distance[i] = Vector3.Distance(transform.position, people[i].transform.position);
@@ -41,18 +49,31 @@ public class PeopleTrack : People
         agent.SetDestination(target.position);
 
         // 判斷 距離 < 1 傷害人類
-        if(agent.remainingDistance <= 1f)
+        if(agent.remainingDistance <= 1f && min!=999)
         {
             HitPeople();
         }
     }
-    
+
+    private float timerHit;
+
     /// <summary>
     /// 傷害人類
     /// </summary>
     private void HitPeople()
     {
-        target.GetComponent<People>().Dead();
+        if(timerHit >= 1f)
+        {
+            timerHit = 0;                              // 計時器 歸零
+            agent.isStopped = true;                 // 代理器 停止
+            ani.SetTrigger("攻擊");                 // 攻擊
+            target.GetComponent<People>().Dead();   // 人類 死亡
+        }
+        else
+        {
+            agent.isStopped = false;                // 否則 - 代理器 開啟
+            timerHit += Time.deltaTime;                // 計時器 累加
+        }
     }
 
     private void OnTriggerEnter(Collider other)

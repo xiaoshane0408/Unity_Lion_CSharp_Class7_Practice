@@ -21,6 +21,8 @@ public class PeopleFarAttack : PeopleTrack
 
     protected override void Track()
     {
+        // 如果 目標 為 空值 跳出
+        if (target == null) return;
         agent.SetDestination(target.position);
         // 變形.看著(目標)
         transform.LookAt(target);
