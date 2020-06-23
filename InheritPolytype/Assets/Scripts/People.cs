@@ -29,8 +29,8 @@ public class People : MonoBehaviour
     /// </summary>
     public void Dead()
     {
-        ani.SetTrigger("死亡");       // 動畫控制器.設定觸發("死亡")
         agent.isStopped = true;       // 停止導覽
-        Destroy(gameObject,1.5f);     // 刪除(遊戲物件, 秒數) 1.5秒後刪除
+        ani.SetTrigger("死亡");       // 動畫控制器.設定觸發("死亡")
+        Destroy(gameObject,1.2f);     // 刪除(遊戲物件, 秒數) 1.5秒後刪除
     }
 }

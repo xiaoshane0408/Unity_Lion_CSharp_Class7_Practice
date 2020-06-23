@@ -26,7 +26,7 @@ public class PeopleTrack : People
         // 儲存所有人跟物件的距離
         for (int i = 0; i < people.Length; i++)
         {
-            if(people[i] == null || people[i].transform.name == "殭屍" || people[i].transform.name=="警察")
+            if(people[i] == null || people[i].transform.tag == "殭屍" || people[i].transform.tag=="警察")
             {
                 // 如果 人類死亡 距離 改成 1000
                 if(people[i]== null)

@@ -584,7 +584,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: b952825bbf1d7e4f7815658cfb39f0ca
+      Hash: 8ad8ed9658a55a43179014e351e2d8b1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PeopleFarAttack
