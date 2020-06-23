@@ -1,7 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - UnityTemplateProjects.SimpleCameraController
+    - PeopleFarAttack
+    - PeopleRun
+    - PeopleTrack
     Unity.RenderPipelines.Core.Runtime.dll:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -28,40 +30,19 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.UI.DebugUIHandlerVector3
     - UnityEngine.Rendering.UI.DebugUIHandlerVector4
     - UnityEngine.Rendering.UI.UIFoldout
-    - UnityEngine.Rendering.Volume
-    - UnityEngine.Rendering.VolumeProfile
     Unity.RenderPipelines.Universal.Runtime.dll:
-    - UnityEngine.Rendering.Universal.Bloom
-    - UnityEngine.Rendering.Universal.ChannelMixer
-    - UnityEngine.Rendering.Universal.ChromaticAberration
-    - UnityEngine.Rendering.Universal.ColorAdjustments
-    - UnityEngine.Rendering.Universal.ColorCurves
-    - UnityEngine.Rendering.Universal.ColorLookup
-    - UnityEngine.Rendering.Universal.DepthOfField
-    - UnityEngine.Rendering.Universal.FilmGrain
     - UnityEngine.Rendering.Universal.ForwardRendererData
-    - UnityEngine.Rendering.Universal.LensDistortion
-    - UnityEngine.Rendering.Universal.LiftGammaGain
-    - UnityEngine.Rendering.Universal.MotionBlur
-    - UnityEngine.Rendering.Universal.PaniniProjection
     - UnityEngine.Rendering.Universal.PostProcessData
-    - UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
-    - UnityEngine.Rendering.Universal.SplitToning
-    - UnityEngine.Rendering.Universal.Tonemapping
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
-    - UnityEngine.Rendering.Universal.Vignette
-    - UnityEngine.Rendering.Universal.WhiteBalance
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -82,7 +63,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    "Assets/\u904A\u6232\u5834\u666F.unity":
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -101,11 +82,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -114,15 +103,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11342}
-    - Class: 114
       Script: {instanceID: 11398}
     - Class: 114
       Script: {instanceID: 11498}
     - Class: 114
       Script: {instanceID: 11518}
-    - Class: 114
-      Script: {instanceID: 11552}
     - Class: 114
       Script: {instanceID: 11608}
     - Class: 114
@@ -130,9 +115,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11686}
     - Class: 114
-      Script: {instanceID: 11702}
-    - Class: 114
       Script: {instanceID: 11722}
+    - Class: 114
+      Script: {instanceID: 11776}
     - Class: 114
       Script: {instanceID: 11850}
     - Class: 114
@@ -144,6 +129,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12262}
     - Class: 114
+      Script: {instanceID: 12300}
+    - Class: 114
       Script: {instanceID: 12484}
     - Class: 114
       Script: {instanceID: 12676}
@@ -154,7 +141,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12864}
     - Class: 114
-      Script: {instanceID: 13092}
+      Script: {instanceID: 13002}
     - Class: 114
       Script: {instanceID: 13118}
     - Class: 114
@@ -173,8 +160,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13630}
     - Class: 114
       Script: {instanceID: 13638}
-    - Class: 114
-      Script: {instanceID: 13676}
     - Class: 114
       Script: {instanceID: 13930}
     - Class: 114
@@ -196,8 +181,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14674}
     - Class: 114
-      Script: {instanceID: 14770}
-    - Class: 114
       Script: {instanceID: 14786}
     - Class: 114
       Script: {instanceID: 14792}
@@ -205,17 +188,25 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
-    - Class: 205
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
-    - Class: 215
-      Script: {instanceID: 0}
-    - Class: 220
+    - Class: 221
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -223,7 +214,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    - Class: 258
+    - Class: 238
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1062,5 +1053,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 20
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - "Assets/\u904A\u6232\u5834\u666F.unity"
   playerPath: C:/shane/Unity_Lion_CSharp_Class7_Practice/Web
